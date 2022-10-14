@@ -57,3 +57,12 @@ def uploadArtifact() {
         }
       }
 }
+
+def makeAMI() {
+  stage('Make AMI') {
+    sh '''
+      terraform init 
+      terraform apply -auto-approve
+    '''
+  }
+}
