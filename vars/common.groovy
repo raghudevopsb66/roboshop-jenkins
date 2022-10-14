@@ -14,7 +14,7 @@ def sonarCheck() {
 
 def codeCheckOut() {
   stage('CheckOut Code') {
-    sh 'rm -rf *'
+    sh 'find . | sed 1d | xargs rm -rf'
     git branch: 'main', url: "https://github.com/raghudevopsb66/${env.COMPONENT}"
   }
 }
