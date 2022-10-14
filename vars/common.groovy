@@ -59,10 +59,13 @@ def uploadArtifact() {
 }
 
 def makeAMI() {
-  stage('Make AMI') {
-    sh '''
+  ansiColor('xterm') {
+    stage('Make AMI') {
+      sh '''
       terraform init 
-      terraform apply -auto-approve
+      terraform apply -auto-approve - var APP_VERSION=${TAG_NAME}
     '''
+    }
   }
+
 }
