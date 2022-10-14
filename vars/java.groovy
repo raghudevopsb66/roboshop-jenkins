@@ -9,6 +9,6 @@ def call() {
     }
     common.sonarCheck()
     common.uploadArtifact()
-
+    common.makeAMI()
   }
 }

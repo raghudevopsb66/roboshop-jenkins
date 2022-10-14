@@ -4,5 +4,6 @@ def call() {
     common.codeCheckOut()
     common.sonarCheck()
     common.uploadArtifact()
+    common.makeAMI()
   }
 }
