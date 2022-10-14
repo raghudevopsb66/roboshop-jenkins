@@ -63,7 +63,7 @@ def makeAMI() {
     stage('Make AMI') {
       sh '''
       terraform init 
-      terraform apply -auto-approve - var APP_VERSION=${TAG_NAME}
+      terraform apply -auto-approve -var APP_VERSION=${TAG_NAME}
     '''
     }
   }
