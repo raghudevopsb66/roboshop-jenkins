@@ -21,7 +21,7 @@ def call() {
           cd ${terraPath}
           terrafile 
           terraform init -backend-config=env/${ENV}-backend.tfvars
-          terraform apply -auto-approve -var-file=env/${ENV}.tfvars
+          terraform destroy -auto-approve -var-file=env/${ENV}.tfvars
         '''
         }
       }
