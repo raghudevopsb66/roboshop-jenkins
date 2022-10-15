@@ -11,6 +11,7 @@ def call() {
 
     parameters {
       choice(name: 'ENV', choices: ['', 'dev', 'prod'], description: 'Pick Env')
+      string(name: 'APP_VERSION', defaultValue: '', description: 'APP_VERSION')
     }
 
     stages {
