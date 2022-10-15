@@ -1,6 +1,6 @@
 def call() {
   if(!env.terraPath) {
-    env.terraPath = "mutable"
+    env.terraPath = "immutable"
   }
   pipeline {
     agent any
