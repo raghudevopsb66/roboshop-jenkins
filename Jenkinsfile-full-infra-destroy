@@ -12,7 +12,7 @@ pipeline {
         dir('frontend') {
           git branch: 'main', url: 'https://github.com/raghudevopsb66/frontend-infra.git'
           sh '''
-            cd mutable
+            cd immutable
             terrafile 
             terraform init -backend-config=env/prod-backend.tfvars
             terraform destroy -auto-approve -var-file=env/prod.tfvars
@@ -29,7 +29,7 @@ pipeline {
             dir('cart') {
               git branch: 'main', url: 'https://github.com/raghudevopsb66/cart-infra.git'
               sh '''
-            cd mutable
+            cd immutable
             terrafile 
             terraform init -backend-config=env/prod-backend.tfvars
             terraform destroy -auto-approve -var-file=env/prod.tfvars
@@ -43,7 +43,7 @@ pipeline {
             dir('catalogue') {
               git branch: 'main', url: 'https://github.com/raghudevopsb66/catalogue-infra.git'
               sh '''
-            cd mutable
+            cd immutable
             terrafile 
             terraform init -backend-config=env/prod-backend.tfvars
             terraform destroy -auto-approve -var-file=env/prod.tfvars
@@ -57,7 +57,7 @@ pipeline {
             dir('user') {
               git branch: 'main', url: 'https://github.com/raghudevopsb66/user-infra.git'
               sh '''
-            cd mutable
+            cd immutable
             terrafile 
             terraform init -backend-config=env/prod-backend.tfvars
             terraform destroy -auto-approve -var-file=env/prod.tfvars
@@ -71,7 +71,7 @@ pipeline {
             dir('shipping') {
               git branch: 'main', url: 'https://github.com/raghudevopsb66/shipping-infra.git'
               sh '''
-            cd mutable
+            cd immutable
             terrafile 
             terraform init -backend-config=env/prod-backend.tfvars
             terraform destroy -auto-approve -var-file=env/prod.tfvars
@@ -85,7 +85,7 @@ pipeline {
             dir('payment') {
               git branch: 'main', url: 'https://github.com/raghudevopsb66/payment-infra.git'
               sh '''
-            cd mutable
+            cd immutable
             terrafile 
             terraform init -backend-config=env/prod-backend.tfvars
             terraform destroy -auto-approve -var-file=env/prod.tfvars
