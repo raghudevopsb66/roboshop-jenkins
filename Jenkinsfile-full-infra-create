@@ -73,7 +73,7 @@ pipeline {
             cd immutable
             terrafile 
             terraform init -backend-config=env/prod-backend.tfvars
-            terraform apply -auto-approve -var-file=env/prod.tfvars -var APP_VERSION=2.0.0
+            terraform apply -auto-approve -var-file=env/prod.tfvars -var APP_VERSION=2.0.1
           '''
             }
           }
