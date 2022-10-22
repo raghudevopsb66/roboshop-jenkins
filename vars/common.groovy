@@ -71,3 +71,13 @@ def makeAMI() {
   }
 
 }
+
+def dockerImage() {
+  ansiColor('xterm') {
+    stage('Build Docker Image') {
+      sh '''
+        docker build .
+      '''
+    }
+  }
+}
