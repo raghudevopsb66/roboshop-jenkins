@@ -12,11 +12,11 @@ def call() {
       }
 
     common.sonarCheck()
-    //if (env.TAG_NAME ==~ ".*") {
+    if (env.TAG_NAME ==~ ".*") {
 //      common.uploadArtifact()
 //      common.makeAMI()
       common.dockerImage()
-    //}
+    }
   }
 
 }

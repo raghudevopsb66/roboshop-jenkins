@@ -4,8 +4,10 @@ def call() {
     common.codeCheckOut()
     common.sonarCheck()
     if (env.TAG_NAME ==~ ".*") {
-      common.uploadArtifact()
-      common.makeAMI()
+//      common.uploadArtifact()
+//      common.makeAMI()
+      common.dockerImage()
+
     }
   }
 }
